@@ -1,0 +1,1 @@
+{"VSKNN": {"k": 1500, "n_sample": 2500, "w": "same", "w_score": "div", "idf_w": false}, "SKNN": {"k": 1500, "n_sample": 2500, "s": "cosine"}, "STAN": {"k": 1500, "n_sample": 2500, "sp_w": 16, "sn_w": 80, "in_w": 128}, "VSTAN": {"k": 2000, "n_sample": 2500, "sp_w": 1e-05, "sn_w": 5, "in_w": 8}}
