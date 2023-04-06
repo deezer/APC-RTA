@@ -1,7 +1,7 @@
 # A Scalable Framework for Automatic Playlist Continuation on Music Streaming Services
 
 
-This anonymous repository provides our Python code to reproduce experiments from the article **A Scalable Framework for Automatic Playlist Continuation on Music Streaming Services**, currently under review for publication in the proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval ([SIGIR 2023](https://sigir.org/sigir2023/)).
+This repository provides our Python code to reproduce experiments from the paper **A Scalable Framework for Automatic Playlist Continuation on Music Streaming Services**, accepted for publication in the proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval ([SIGIR 2023](https://sigir.org/sigir2023/)).
 
 
 
@@ -10,11 +10,11 @@ This anonymous repository provides our Python code to reproduce experiments from
 
 Music streaming services often aim to recommend songs for users to extend the playlists they have created on these services. However, extending playlists while preserving their musical characteristics and matching user preferences remains a challenging task, commonly referred to as **Automatic Playlist Continuation (APC)**. Besides, while these services often need to select the best songs to recommend in real-time and among large catalogs with millions of candidates, recent research on APC mainly focused on models with few scalability guarantees and evaluated on relatively small datasets.
 
-In our SIGIR 2023 submission, we introduce **a general framework to build scalable yet effective APC models** for large-scale applications. Based on a **Represent-Then-Aggregate** strategy, it ensures scalability by design while remaining flexible enough to incorporate a wide range of representation learning and sequence modeling techniques, e.g., based on recurrent neural networks or Transformers.
+In this SIGIR 2023 paper, we introduce **a general framework to build scalable yet effective APC models** for large-scale applications. Based on a **Represent-Then-Aggregate** strategy, it ensures scalability by design while remaining flexible enough to incorporate a wide range of representation learning and sequence modeling techniques, e.g., based on recurrent neural networks or Transformers.
 
 In the paper, we demonstrate the relevance of our framework through an in-depth experimental validation:
 * Firstly, we provide **offline experiments** on Spotify's **Million Playlist Dataset (MPD)**, i.e., the largest public dataset for APC. This repository aims to facilitate the reproducibility of these experiments.
-* In addition, we also explain how, in 2022, we successfully leveraged this framework to improve APC in production on the global music streaming service _XXX_ (we hide the name of the service to preserve anonymity during the review phase). We report results from a large-scale **online A/B test** on this service, emphasizing the practical impact of our approach in such a real-world application.
+* In addition, we also explain how, in 2022, we successfully leveraged this framework to improve APC in production on the global music streaming service [Deezer](https://www.deezer.com/). We report results from a large-scale **online A/B test** on this service, emphasizing the practical impact of our approach in such a real-world application.
 
 <p align="center">
   <img height="325" src="figures/apc.png">
@@ -28,7 +28,7 @@ In the paper, we demonstrate the relevance of our framework through an in-depth 
 ### Code
 
 ```
-git clone https://github.com/apc-rta/APC-RTA
+git clone https://github.com/deezer/APC-RTA
 cd APC-RTA
 pip install -r requirements.txt
 ```
@@ -98,3 +98,17 @@ python -m run_baselines --model_name VSKNN
 
 After training, baseline models can be evaluated using the same script as for RTA models (see the above command for `src.plot_results`).
 The above notes on model/score names and changes remain valid.
+
+
+## Cite
+
+Please cite our paper if you use this code in your own work:
+
+```BibTeX
+@inproceedings{bendada2023scalable,
+ title = {A Scalable Framework for Automatic Playlist Continuation on Music Streaming Services},
+ author = {Bendada, Walid and Salha-Galvan, Guillaume and Bouab\c{c}a, Thomas and Cazenave, Tristan},
+ booktitle = {Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval},
+ year = {2023}
+}
+```
